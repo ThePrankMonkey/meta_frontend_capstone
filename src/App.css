@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+nav img {
+  width: 200px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #111;
+}
+
+footer img {
+  width: 200px;
+}
+
+footer section {
+  justify-items: center;
+  width:80%;
+  margin-left: 10%;
+  gap: 20px;
+}
+
+footer section {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display:grid;
+}
