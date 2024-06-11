@@ -1,3 +1,3 @@
 export default function Reservations() {
-  return <></>;
+  return <>Reservations</>;
 }
