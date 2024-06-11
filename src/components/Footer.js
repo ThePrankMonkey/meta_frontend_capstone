@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import littlelemon_logo_small from "../images/littlelemon_logo_small.png";
 
 export default function Footer() {
@@ -10,12 +11,24 @@ export default function Footer() {
         <div>
           <h3>Document Navigation</h3>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/menu">Menu</Link>
+            </li>
+            <li>
+              <Link to="/reservations">Reservations</Link>
+            </li>
+            <li>
+              <Link to="/order">Order Online</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </div>
         <div>
