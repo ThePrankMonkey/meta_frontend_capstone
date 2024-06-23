@@ -8,7 +8,7 @@ export default function Footer() {
         <section>
           <img src={littlelemon_logo_small} alt="Little Lemon small logo" />
         </section>
-        <section>
+        <section className="footer-nav">
           <h3>Document Navigation</h3>
           <ul>
             <li>
@@ -31,7 +31,7 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <section>
+        <section className="footer-contact">
           <h3>Contact</h3>
           <ul>
             <li>Address</li>
@@ -39,12 +39,11 @@ export default function Footer() {
             <li>Email</li>
           </ul>
         </section>
-        <section>
+        <section className="footer-social">
           <h3>Social Media Links</h3>
           <ul>
-            <li>Address</li>
-            <li>Phone Number</li>
-            <li>Email</li>
+            <li>Meta</li>
+            <li>X</li>
           </ul>
         </section>
       </article>
