@@ -4,11 +4,11 @@ import littlelemon_logo_small from "../images/littlelemon_logo_small.png";
 export default function Footer() {
   return (
     <footer>
-      <section>
-        <div>
+      <article>
+        <section>
           <img src={littlelemon_logo_small} alt="Little Lemon small logo" />
-        </div>
-        <div>
+        </section>
+        <section>
           <h3>Document Navigation</h3>
           <ul>
             <li>
@@ -30,24 +30,24 @@ export default function Footer() {
               <Link to="/login">Login</Link>
             </li>
           </ul>
-        </div>
-        <div>
+        </section>
+        <section>
           <h3>Contact</h3>
           <ul>
             <li>Address</li>
             <li>Phone Number</li>
             <li>Email</li>
           </ul>
-        </div>
-        <div>
+        </section>
+        <section>
           <h3>Social Media Links</h3>
           <ul>
             <li>Address</li>
             <li>Phone Number</li>
             <li>Email</li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </article>
     </footer>
   );
 }

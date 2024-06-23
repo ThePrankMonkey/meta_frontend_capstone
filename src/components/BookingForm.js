@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function BookingForm() {
+export default function BookingForm(props) {
+  console.log(props.availableTimes);
   const [bookings, setBookings] = useState({
-    date: "",
+    date: props.currDate,
     time: "17:00",
     guests: "1",
     occasion: "Birthday",
@@ -13,6 +14,9 @@ export default function BookingForm() {
 
     if ((bookings.date, bookings.time, bookings.guests !== "")) {
       console.log(bookings);
+      window.alert(
+        `Your booking for ${bookings.guests} guests at ${bookings.time} on ${bookings.date} is confirmed!`
+      );
       setBookings({
         date: "",
         time: "17:00",
@@ -37,6 +41,8 @@ export default function BookingForm() {
         value={bookings.date}
         onChange={(e) => {
           setBookings({ ...bookings, date: e.target.value });
+          props.dispatch({ type: "date", payload: e.target.value });
+          props.initializeTimes(e.target.value);
         }}
         required
       />
@@ -50,12 +56,12 @@ export default function BookingForm() {
         }}
         required
       >
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
+        {props.availableTimes[bookings.date] &&
+          props.availableTimes[bookings.date].map((atime) => (
+            <option key={atime} value={atime}>
+              {atime}
+            </option>
+          ))}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
@@ -84,7 +90,7 @@ export default function BookingForm() {
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+      <input type="submit" value="Make your reservation" />
     </form>
   );
 }
